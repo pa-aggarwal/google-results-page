@@ -1,12 +1,101 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="stylesheets/reset.css">
         <link rel="stylesheet" href="stylesheets/style.css">
         <title>build this webpage - Google Search</title>
     </head>
+
     <body>
 
+        <!-- Contains search-bar, and links to other pages. -->
+        <header class="header">
+            <div class="header__top">
+                <div class="google-logo">
+                    <a href="https://www.google.com/" class="google-logo__link">
+                        <img src="images/google-logo.png" alt="Google's logo" class="google-logo__image center-vert">
+                    </a>
+                </div>
+                <div class="search-bar">
+                    <input type="text" class="search-bar__text" id="search-bar" name="search-bar" value="build this webpage">
+                    <a href="#" class="search-bar__link">
+                        <img src="images/clear-icon.svg" alt="Clear search icon" class="search-bar__icon search-bar__icon--1 center-vert">
+                    </a>
+                    <span class="search-bar__divider center-vert"></span>
+                    <a href="#" class="search-bar__link">
+                        <img src="images/microphone-icon.svg" alt="Voice search icon" class="search-bar__icon search-bar__icon--2 center-vert">
+                    </a>
+                    <a href="#" class="search-bar__link">
+                        <img src="images/search-icon.svg" alt="Search icon" class="search-bar__icon search-bar__icon--3 center-vert">
+                    </a>
+                </div>
+                <div class="personal">
+                    <div class="personal__logo-box">
+                        <img src="images/apps-icon.svg" alt="Google Apps icon" class="personal__logo">
+                    </div>
+                    <p class="personal__initial">P</p>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <div class="search-options">
+                    <div class="search-category">
+                        <ul class="search-category__list">
+                            <li class="search-category__item">
+                                <span class="search-category__icon-box">
+                                    <img src="images/colour-search-icon.svg" alt="Search microscope icon" class="search-category__icon">
+                                </span>
+                                <a href="#" class="search-category__link">All</a>
+                            </li>
+                            <li class="search-category__item">
+                                <span class="search-category__icon">
+                                    <img src="images/news-icon.svg" alt="Google News icon" class="search-category__icon">
+                                </span>
+                                <a href="#" class="search-category__link">News</a>
+                            </li>
+                            <li class="search-category__item">
+                                <span class="search-category__icon">
+                                    <img src="images/maps-icon.svg" alt="Google Maps icon" class="search-category__icon">
+                                </span>
+                                <a href="#" class="search-category__link">Maps</a>
+                            </li>
+                            <li class="search-category__item">
+                                <span class="search-category__icon">
+                                    <img src="images/video-icon.svg" alt="Video icon" class="search-category__icon">
+                                </span>
+                                <a href="#" class="search-category__link">Videos</a>
+                            </li>
+                            <li class="search-category__item">
+                                <span class="search-category__icon">
+                                    <img src="images/shopping-icon.svg" alt="Shopping icon" class="search-category__icon">
+                                </span>
+                                <a href="#" class="search-category__link">Shopping</a>
+                            </li>
+                            <li class="search-category__item">
+                                <span class="search-category__icon">
+                                    <img src="images/more-icon.svg" alt="More categories icon" class="search-category__icon">
+                                </span>
+                                <a href="#" class="search-category__link">More</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="search-custom">
+                        <ul class="search-custom__list">
+                            <li class="search-custom__item">
+                                <a href="#" class="search-custom__link">Settings</a>
+                            </li>
+                            <li class="search-custom__item">
+                                <a href="#" class="search-custom__link">Tools</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+
     </body>
+
 </html>
