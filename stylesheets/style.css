@@ -18,15 +18,16 @@ body {
  */
 
 .header {
+    border-bottom: .1rem solid #E9ECEF;
     display: flex;
-    /* Split search bar and categories into columns. */
+    /* Split search-bar and search-types into columns. */
     flex-direction: column;
     width: 100%;
 }
 
 .header__top {
     display: flex;
-    padding: 2.25rem 2.75rem 2.25rem 2.4rem;
+    padding: 2.25rem 2.75rem 1rem 2.4rem;
 }
 
 .google-logo { max-width: 9rem; }
@@ -48,6 +49,7 @@ body {
     border-radius: 3rem;
     display: inline-block;
     padding: 1.3rem 2rem;
+    /* Input text occupies entire search-bar. */
     width: 100%;
 }
 
@@ -74,14 +76,14 @@ body {
 
 /* Clear 'x' icon */
 .search-bar__icon--1 {
-    /* Filter converts image colour to #6C757D. */
+    /* Filter converts image colour to #878F97. */
     filter:
-        invert(46%)
-        sepia(6%)
-        saturate(643%)
-        hue-rotate(167deg)
-        brightness(95%)
-        contrast(85%);
+        invert(61%)
+        sepia(13%)
+        saturate(243%)
+        hue-rotate(169deg)
+        brightness(90%)
+        contrast(86%);
     right: 10rem;
 }
 
@@ -104,7 +106,7 @@ body {
 .personal {
     align-items: center;
     display: flex;
-    /* Personal items use remaining space of top portion of header. */
+    /* Email and apps-logo use remaining space of top portion of header. */
     flex-grow: 1;
     justify-content: flex-end;
 }
@@ -137,6 +139,7 @@ body {
 
 .personal__initial {
     background-color: #7C949C;
+    /* Colour of border gets changed in hover state. */
     border: .35rem solid #FFF;
     border-radius: 50%;
     color: #FFF;
@@ -149,3 +152,94 @@ body {
     border: .35rem solid #E9ECEF;
     cursor: pointer;
 }
+
+/* All text in this div inherits font-size property. */
+.header__bottom { font-size: 1.3rem; }
+
+.search-options {
+    display: flex;
+    /* Creates space between search-types and settings. */
+    justify-content: space-between;
+    margin-left: 17rem;
+    width: 52.5%;
+}
+
+.search-type__list { list-style: none; }
+
+.search-type__item { display: inline-block; }
+
+.search-type__link:link,
+.search-type__link:visited {
+    color: #5F666D;
+    display: inline-block;
+    padding: 1.25rem 1rem;
+    text-decoration: none;
+}
+
+.search-type__link:active { color: #4C8BF5; }
+
+.search-type__link--1:link,
+.search-type__link--1:visited {
+    border-bottom: .3rem solid #4C8BF5;
+    color: #4C8BF5;
+}
+
+.search-type__icon {
+    display: inline-block;
+    /* Changes this image's colour to #5F666D. */
+    filter:
+        invert(39%)
+        sepia(16%)
+        saturate(242%)
+        hue-rotate(169deg)
+        brightness(94%)
+        contrast(89%);
+    margin-right: .5rem;
+    vertical-align: bottom;
+    width: 1.6rem;
+}
+
+.search-type__link:active .search-type__icon {
+    /* Converts this image's colour to #4C8BF5. */
+    filter:
+        invert(47%)
+        sepia(95%)
+        saturate(1249%)
+        hue-rotate(197deg)
+        brightness(94%)
+        contrast(105%);
+}
+
+/* Order matters here. This rule must go after .search-type__icon */
+.search-type__icon--1 { filter: none; }
+
+.search-custom__list { list-style: none; }
+
+.search-custom__item { display: inline-block; }
+
+.search-custom__button {
+    background-color: transparent;
+    color: #5F666D;
+}
+
+.search-custom__button:hover { cursor: pointer; }
+
+.search-custom__button:focus { outline: none; }
+
+.search-custom__button--1 { padding: 1.25rem 1rem; }
+
+.search-custom__button--1:active { color: #4C8BF5; }
+
+.search-custom__button--2 {
+    /* Border colour changes in hover state. */
+    border: .1rem solid #FFF;
+    border-radius: .2rem;
+    padding: .5rem 1rem;
+}
+
+.search-custom__button--2:hover {
+    background-color: #F5F5F5;
+    border: .1rem solid #C6C6C6;
+}
+
+.search-custom__button--2:active { color: #000; }
