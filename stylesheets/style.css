@@ -8,10 +8,17 @@ body {
     font-size: 1.6rem;
 }
 
+h3 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
 .center-vert {
     top: 50%;
     transform: translateY(-50%);
 }
+
+.bold-text { font-weight: bold; }
 
 /**
  * HEADER
@@ -161,7 +168,7 @@ body {
     /* Creates space between search-types and settings. */
     justify-content: space-between;
     margin-left: 17rem;
-    width: 52.5%;
+    width: 53.2%;
 }
 
 .search-type__list { list-style: none; }
@@ -195,6 +202,7 @@ body {
         brightness(94%)
         contrast(89%);
     margin-right: .5rem;
+    /* Align image with bottom of neighbouring text. */
     vertical-align: bottom;
     width: 1.6rem;
 }
@@ -218,6 +226,7 @@ body {
 .search-custom__item { display: inline-block; }
 
 .search-custom__button {
+    /* Remove user-agent default background-color. */
     background-color: transparent;
     color: #5F666D;
 }
@@ -243,3 +252,184 @@ body {
 }
 
 .search-custom__button--2:active { color: #000; }
+
+/**
+ * MAIN BODY
+ */
+
+.main { font-size: 1.4rem; }
+
+/**
+ * GENERAL RESULTS
+ */
+
+.results-container {
+    margin-left: 18rem;
+    width: 66.2rem;
+}
+
+.results-stats {
+    color: #70757A;
+    padding: 1.5rem 0;
+}
+
+/* Space between separate search query results. */
+.result + .result { margin-top: 3rem; }
+
+.result:first-of-type { margin-top: .5rem; }
+
+.result-heading { margin-bottom: 1.5rem; }
+
+/**
+ * SEARCH RESULTS
+ */
+
+.search-result { width: 92%; }
+
+.search-result__link { display: inline; }
+
+.search-result__link:link { text-decoration: none; }
+
+.search-result__address {
+    color: #000;
+    display: inline-block;
+    font-style: normal;
+    padding-bottom: .75rem;
+}
+
+.search-result__address-info { color: #5F666D; }
+
+.search-result__title {
+    color: #1A0DAB;
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
+/* Apply text-decoration when search-result link is hovered. */
+.search-result__link:hover .search-result__title { text-decoration: underline; }
+
+.search-result__description {
+    color: #5F666D;
+    line-height: 1.6;
+}
+
+/**
+ * VIDEO RESULTS
+ */
+
+.videos-container {
+    /* Display each video in separate row. */
+    display: flex;
+    /* Positioned ancestor for box surrounding arrow image. */
+    position: relative;
+}
+
+.video {
+    border: .1rem solid #DEE2E6;
+    border-radius: 1rem;
+    flex: 1;
+    /* Prevent video thumbnail images from being larger than box. */
+    overflow: hidden;
+}
+
+.video + .video { margin-left: .75rem; }
+
+.video__link:link {
+    color: #1A0DAB;
+    text-decoration: none;
+}
+
+.video__link:visited {
+    color: #609;
+    text-decoration: none;
+}
+
+.video__thumbnail {
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Don't stretch image. */
+    background-size: cover;
+    height: 12rem;
+    /* Positioned ancestor for video length element. */
+    position: relative;
+}
+
+/* stylelint-disable declaration-colon-newline-after */
+
+.video__thumbnail--1 {
+    background-image: url("http://i3.ytimg.com/vi/YWA-xbsJrVg/maxresdefault.jpg");
+}
+
+.video__thumbnail--2 {
+    background-image: url("http://i3.ytimg.com/vi/l3mUE6qj2Qg/maxresdefault.jpg");
+}
+
+.video__thumbnail--3 {
+    background-image: url("http://i3.ytimg.com/vi/jHPr-CuvHhs/maxresdefault.jpg");
+}
+
+/* stylelint-enable declaration-colon-newline-after */
+
+.video__length {
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: .2rem;
+    color: #FFF;
+    font-size: 1.2rem;
+    padding: .25rem .4rem;
+    /* Positioned relative to thumbnail. */
+    position: absolute;
+    left: 1rem;
+    bottom: .75rem;
+}
+
+.video__title {
+    display: block;
+    font-size: 1.6rem;
+    /* Fixed height forces each title to have identical space below. */
+    height: 13rem;
+    padding: 1.75rem 1.75rem 0;
+    line-height: 1.4;
+}
+
+/* Apply text-decoration when video link/image is hovered. */
+.video__link:hover .video__title { text-decoration: underline; }
+
+.video__info {
+    color: #878F97;
+    /* Space between video info and title. */
+    margin-top: 1rem;
+    padding-bottom: 1.25rem;
+    padding-left: 1.75rem;
+}
+
+.video__author {
+    display: block;
+    /* Space between video author/channel name and statistics. */
+    margin-bottom: .6rem;
+}
+
+.video__website {
+    color: #000;
+    /* Remove user-agent default italic style for cite element. */
+    font-style: normal;
+}
+
+.video-arrow-box {
+    background-color: #FFF;
+    /* Positioned relative to videos container. */
+    position: absolute;
+    right: -1.8rem;
+    width: 6%;
+}
+
+.video-arrow-box:hover { cursor: pointer; }
+
+.video-arrow {
+    border: .2rem solid #DDE3E4;
+    border-radius: 50%;
+    box-shadow: 0 .1rem .5rem rgba(0, 0, 0, .2);
+    display: block;
+    padding: .75rem;
+    /* Image fills provided space by container. */
+    width: 100%;
+}
