@@ -6,12 +6,16 @@
 body {
     font-family: 'Arial', sans-serif;
     font-size: 1.6rem;
+    position: relative;
 }
 
 h3 {
     font-size: 2rem;
     font-weight: 300;
 }
+
+ul { list-style: none; }
+li { display: inline-block; }
 
 a:link,
 a:visited { text-decoration: none; }
@@ -22,6 +26,10 @@ a:visited { text-decoration: none; }
 }
 
 .bold-text { font-weight: bold; }
+
+.external-link:link { color: #1A0DAB; }
+.external-link:visited { color: #609; }
+
 .fake-link:hover { cursor: pointer; }
 .hover-underline:hover { text-decoration: underline; }
 
@@ -130,9 +138,7 @@ a:visited { text-decoration: none; }
     width: 10.5%;
 }
 
-.personal__logo-box:hover {
-    background-color: rgba(60, 64, 67, .1);
-}
+.personal__logo-box:hover { background-color: rgba(60, 64, 67, .1); }
 
 .personal__logo {
     /* Logo image uses entire width of container. */
@@ -159,9 +165,7 @@ a:visited { text-decoration: none; }
     padding: .75rem 1.1rem;
 }
 
-.personal__initial:hover {
-    border: .35rem solid #E9ECEF;
-}
+.personal__initial:hover { border: .35rem solid #E9ECEF; }
 
 /* All text in this div inherits font-size property. */
 .header__bottom { font-size: 1.3rem; }
@@ -173,10 +177,6 @@ a:visited { text-decoration: none; }
     margin-left: 17rem;
     width: 53.2%;
 }
-
-.search-type__list { list-style: none; }
-
-.search-type__item { display: inline-block; }
 
 .search-type__link:link,
 .search-type__link:visited {
@@ -223,10 +223,6 @@ a:visited { text-decoration: none; }
 /* Order matters here. This rule must go after .search-type__icon */
 .search-type__icon--1 { filter: none; }
 
-.search-custom__list { list-style: none; }
-
-.search-custom__item { display: inline-block; }
-
 .search-custom__button {
     /* Remove user-agent default background-color. */
     background-color: transparent;
@@ -236,7 +232,6 @@ a:visited { text-decoration: none; }
 .search-custom__button:focus { outline: none; }
 
 .search-custom__button--1 { padding: 1.25rem 1rem; }
-
 .search-custom__button--1:active { color: #4C8BF5; }
 
 .search-custom__button--2 {
@@ -301,16 +296,11 @@ a:visited { text-decoration: none; }
     width: 100%;
 }
 
-.external-link:link { color: #1A0DAB; }
-
-.external-link:visited { color: #609; }
-
 /**
  * SEARCH RESULTS
  */
 
 .search-result { width: 92%; }
-
 .search-result__link { display: inline; }
 
 .search-result__address {
@@ -438,13 +428,7 @@ a:visited { text-decoration: none; }
     position: relative;
 }
 
-.keywords__list { list-style: none; }
-
-.keywords__item {
-    display: inline-block;
-    font-size: 1.3rem;
-}
-
+.keywords__item { font-size: 1.3rem; }
 .keywords__item + .keywords__item { margin-left: .25rem; }
 
 .keywords__link:link {
@@ -558,14 +542,9 @@ a:visited { text-decoration: none; }
  * EXTRA SEARCHES
  */
 
-.extra-searches { margin-bottom: 3rem; }
-
 .extra-searches__heading { margin-bottom: 2.5rem; }
-
-.extra-searches__list {
-    font-size: 1.6rem;
-    list-style: none;
-}
+.extra-searches__list { font-size: 1.6rem; }
+.extra-searches__item { display: block; }
 
 .extra-searches__link::before {
     content: url("../images/search-icon.svg");
