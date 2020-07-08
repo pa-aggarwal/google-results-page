@@ -257,7 +257,10 @@ a:visited { text-decoration: none; }
  * MAIN BODY
  */
 
-.main { font-size: 1.4rem; }
+.main {
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+}
 
 /**
  * GENERAL RESULTS
@@ -585,3 +588,109 @@ a:visited { text-decoration: none; }
     padding: 0 0 1.25rem 3.25rem;
     position: relative;
 }
+
+/**
+ * LOGO PAGE NAVIGATION
+ */
+
+.logo-nav {
+    font-size: 1.4rem;
+    /* Height of container bigger than table's height: 5.6rem */
+    height: 6rem;
+    position: relative;
+}
+
+.logo-nav__table {
+    /* Remove space between data cells in table. */
+    border-collapse: collapse;
+    /* Horizontally center table. */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo-nav__cell {
+    color: #4285F4;
+    text-align: center;
+    padding: 0;
+}
+
+/* First page (1) is black. */
+.logo-nav__cell:nth-child(2) { color: #000; }
+
+.logo-nav__letter {
+    background: url("../images/nav_logo299.png") no-repeat;
+    display: block;
+    height: 4rem;
+    /* Hide unwanted parts of image. */
+    overflow: hidden;
+    width: 2rem;
+}
+
+.logo-nav__letter--1 {
+    /* x-offset based on position of letter in image. */
+    background-position: -2.4rem 0;
+    width: 2.8rem;
+}
+
+.logo-nav__letter--2 { background-position: -5.3rem 0; }
+.logo-nav__letter--3 { background-position: -7.4rem 0; }
+
+.logo-nav__letter--4 {
+    background-position: -9.6rem 0;
+    width: 7.1rem;
+}
+
+.next-page {
+    display: block;
+    margin-left: 5.3rem;
+}
+
+/**
+ * FOOTER
+ */
+
+.footer {
+    background-color: #EFEFEF;
+    color: #5D666F;
+    font-size: 1.4rem;
+    width: 100%;
+}
+
+.footer__link:link,
+.footer__link:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer__link:hover { color: #000; }
+
+.location {
+    border: .1rem solid #E0E0E0;
+    padding: 1.2rem 0 1.2rem 18rem;
+}
+
+.location__country {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.location__address {
+    border-left: .15rem solid #DEE2E6;
+    color: #000;
+    padding: .5rem 0 .5rem 1.75rem;
+}
+
+.location__address::before {
+    background-color: #9E9E9E;
+    border-radius: 2rem;
+    content: "";
+    display: inline-block;
+    height: 1rem;
+    margin-right: .5rem;
+    width: 1rem;
+}
+
+.extra-options { padding: 1.2rem 0 1.2rem 18rem; }
+.extra-options__link { padding-left: 2.2rem; }
